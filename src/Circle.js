@@ -11,7 +11,7 @@ var Circle = function(id) {
 
 Circle.prototype.init = function() {
   self.element = document.getElementById(this.id)
-  console.log(this.id)
+  console.log("Hey, the element had ID: " + this.id)
 
 }
 
