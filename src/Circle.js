@@ -11,6 +11,8 @@ var Circle = function(id) {
 
 Circle.prototype.init = function() {
   self.element = document.getElementById(this.id)
+  console.log(this.id)
+
 }
 
 Circle.prototype.move = function() {
