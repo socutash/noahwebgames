@@ -8,10 +8,10 @@ function Camera(renderwidth, renderheight) {
 
 	this.camera =
     		new THREE.PerspectiveCamera(
-        	viewAngle,
-        	aspect,
-        	near,
-        	far
+        	this.viewAngle,
+        	this.aspect,
+        	this.near,
+        	this.far
     		);
 
 }
