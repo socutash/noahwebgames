@@ -1,12 +1,12 @@
 
 function Camera(renderwidth, renderheight) {
 
-	var viewAngle = 45;
-	var aspect = renderwidth/renderheight;
-	var near = 0.1;
-	var far = 10000;
+	this.viewAngle = 45;
+	this.aspect = renderwidth/renderheight;
+	this.near = 0.1;
+	this.far = 10000;
 
-	const camera =
+	this.camera =
     		new THREE.PerspectiveCamera(
         	viewAngle,
         	aspect,
