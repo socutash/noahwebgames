@@ -13,6 +13,8 @@ function GameSpace(renderwidth, renderheight) {
 
 GameSpace.prototype.add = function(anObject) {
 
+	console.log(this.scene)
+
 	this.scene.add(anObject);
 
 }
