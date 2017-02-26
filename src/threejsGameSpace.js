@@ -7,7 +7,7 @@ function GameSpace(renderwidth, renderheight) {
 	const container = document.body
 
 	const renderer = new THREE.WebGLRenderer()
-	const scene = new THREE.Scene()
+	var scene = new THREE.Scene()
 
 	console.log("Hey: " + this.scene)
 
