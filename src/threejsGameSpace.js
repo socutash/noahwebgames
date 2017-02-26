@@ -9,6 +9,8 @@ function GameSpace(renderwidth, renderheight) {
 	const renderer = new THREE.WebGLRenderer()
 	const scene = new THREE.Scene()
 
+	console.log(this.scene)
+
 }
 
 GameSpace.prototype.add = function(anObject) {
@@ -21,7 +23,7 @@ GameSpace.prototype.add = function(anObject) {
 
 GameSpace.prototype.show = function() {
 
-	this.rendered.setSize(this.width, this.height)
+	this.renderer.setSize(this.width, this.height)
 	this.container.appendChild(this.renderer.domElement)
 
 }
