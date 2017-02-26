@@ -1,15 +1,15 @@
 
 function GameSpace(renderwidth, renderheight) {
 
-	var width = renderwidth;
-	var height = renderheight;
+	this.width = renderwidth;
+	this.height = renderheight;
 
-	const container = document.body
+	const this.container = document.body
 
-	const renderer = new THREE.WebGLRenderer()
-	var scene = new THREE.Scene()
+	const this.renderer = new THREE.WebGLRenderer()
+	const this.scene = new THREE.Scene()
 
-	console.log("Hey: " + scene)
+	console.log("Hey: " + this.scene)
 
 }
 
