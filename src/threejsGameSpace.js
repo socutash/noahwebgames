@@ -51,14 +51,16 @@ GameSpace.prototype.show = function() {
 
 GameSpace.prototype.go = function() {
 
-	function update() {
+	this.renderer.render(this.scene, this._findCameraInScene())
+
+	//function update() {
 	
-		this.renderer.render(this.scene, this._findCameraInScene())
+	//	this.renderer.render(this.scene, this._findCameraInScene())
 
-		requestAnimationFrame(this.update)
+	//	requestAnimationFrame(update)
 
-	}
+	//}
 
-	requestAnimationFrame(this.update)
+	//requestAnimationFrame(this.update)
 
 }
