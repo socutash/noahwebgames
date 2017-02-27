@@ -9,7 +9,7 @@ function GameSpace(renderwidth, renderheight) {
 	renderer = new THREE.WebGLRenderer();
 	scene = new THREE.Scene();
 
-	console.log("Hey: " + this.scene);
+	console.log("Hey: " + self.scene);
 
 }
 
@@ -50,6 +50,6 @@ GameSpace.prototype.show = function() {
 
 GameSpace.prototype.go = function() {
 
-	this.renderer.render(this.scene, self._findCameraInScene())
+	self.renderer.render(this.scene, self._findCameraInScene())
 
 }
