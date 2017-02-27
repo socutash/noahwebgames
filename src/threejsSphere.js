@@ -14,7 +14,7 @@ function Sphere(radius, segments, rings) {
 	this.sphereMaterial = new THREE.MeshLambertMaterial(
 
 		{
-			color: 0xCC0000;
+			color: 0xCC0000
 		}
 	)
 
