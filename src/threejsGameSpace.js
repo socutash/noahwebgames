@@ -13,6 +13,8 @@ function GameSpace(renderwidth, renderheight) {
 
 }
 
+// Wonky that renderer needs to be told about both the sceene *and( the camera
+// Make sure there aren't cases where you attach more than one camera.
 GameSpace.prototype._findCameraInScene = function() {
 
 	var camera = null;
@@ -30,7 +32,6 @@ GameSpace.prototype._findCameraInScene = function() {
 	};
 
 	return camera 
-
 }
 
 GameSpace.prototype.add = function(anObject) {
@@ -50,6 +51,6 @@ GameSpace.prototype.show = function() {
 
 GameSpace.prototype.go = function() {
 
-	self.renderer.render(this.scene, self._findCameraInScene())
+	self.renderer.render(self.scene, self._findCameraInScene())
 
 }
