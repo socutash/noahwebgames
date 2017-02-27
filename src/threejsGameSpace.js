@@ -1,15 +1,15 @@
 
 function GameSpace(renderwidth, renderheight) {
 
-	width = renderwidth;
-	height = renderheight;
+	this.idth = renderwidth;
+	this.height = renderheight;
 
-	container = document.body;
+	this.container = document.body;
 
-	renderer = new THREE.WebGLRenderer();
-	scene = new THREE.Scene();
+	this.renderer = new THREE.WebGLRenderer();
+	this.scene = new THREE.Scene();
 
-	console.log("Hey: " + self.scene);
+	console.log("Hey: " + this.scene);
 
 }
 
@@ -19,13 +19,13 @@ GameSpace.prototype._findCameraInScene = function() {
 
 	var camera = null;
 
-	var length = self.scene.children.length 
+	var length = this.scene.children.length 
 
 	for (var i = 0; i < length; i++) {
 
-		if (self.scene.children[i].type.match("Camera")) {
+		if (this.scene.children[i].type.match("Camera")) {
 
-			camera = self.scene.children[i];
+			camera = this.scene.children[i];
 
 		};
 
@@ -36,21 +36,21 @@ GameSpace.prototype._findCameraInScene = function() {
 
 GameSpace.prototype.add = function(anObject) {
 
-	console.log(self.scene)
+	console.log(this.scene)
 
-	self.scene.add(anObject);
+	this.scene.add(anObject);
 
 }
 
 GameSpace.prototype.show = function() {
 
-	self.renderer.setSize(self.width, self.height)
-	self.container.appendChild(self.renderer.domElement)
+	this.renderer.setSize(this.width, this.height)
+	this.container.appendChild(this.renderer.domElement)
 
 }
 
 GameSpace.prototype.go = function() {
 
-	self.renderer.render(self.scene, self._findCameraInScene())
+	this.renderer.render(this.scene, this._findCameraInScene())
 
 }
