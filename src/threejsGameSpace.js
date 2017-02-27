@@ -55,10 +55,10 @@ GameSpace.prototype.go = function() {
 	
 		this.renderer.render(this.scene, this._findCameraInScene())
 
-		requestAnimationFrame(update)
+		requestAnimationFrame(this.update)
 
 	}
 
-	requestAnimationFrame(update)
+	requestAnimationFrame(this.update)
 
 }
