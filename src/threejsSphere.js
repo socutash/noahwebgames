@@ -25,5 +25,12 @@ function Sphere(radius, segments, rings) {
 
 	);
 
-}
+};
 
+Sphere.prototype.position =  function(x, y, z) {
+
+	this.sphere.position.x = x;
+	this.sphere.position.y = y;
+	this.sphere.position.z = z;
+
+};
