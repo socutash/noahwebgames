@@ -2,7 +2,7 @@
 function Sphere(radius, segments, rings) {
 
 	this.radius = radius;
-	this.segments = sphere;
+	this.segments = segments;
 	this.rings = rings;
 
 	this.sphereGeometry = new THREE.SphereGeometry(
@@ -15,8 +15,8 @@ function Sphere(radius, segments, rings) {
 
 		{
 			color: 0xCC0000
-		}
-	)
+		};
+	);
 
 	this.sphere = new THREE.Mesh(
 
