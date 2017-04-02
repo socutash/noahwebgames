@@ -21,8 +21,8 @@ function GameSpace(renderwidth, renderheight) {
 
 GameSpace.prototype._setDefaultLight = function() {
 
-	_appcontext.light = new THREE.PointLight(0xffffff)
-	_appcontext.add(_appcontext.light)
+	_appcontext.light = new THREE.AmbientLight(0xffffff, 0.3);
+	_appcontext.add(_appcontext.light);
 
 }
 
