@@ -8,7 +8,7 @@ function GameSpace(renderwidth, renderheight) {
 
 	this.renderer = new THREE.WebGLRenderer();
 	this.scene = new THREE.Scene();
-	this.camera = null;
+	this.myCamera = null;
 
 	_appcontext = this;
 
@@ -30,6 +30,8 @@ GameSpace.prototype._findCameraInScene = function() {
 
 		if (_appcontext.scene.children[i].type.match("Camera")) {
 
+			console.log("Found a camera.")
+
 			camera = _appcontext.scene.children[i];
 
 		};
@@ -38,7 +40,7 @@ GameSpace.prototype._findCameraInScene = function() {
 
 	console.log(camera)
 
-	_appcontext.camera = camera 
+	_appcontext.myCamera = camera 
 }
 
 GameSpace.prototype.add = function(anObject) {
@@ -58,15 +60,15 @@ GameSpace.prototype.show = function() {
 
 GameSpace.prototype.go = function() {
 
-	_appcontext.camera = _appcontext._findCameraInScene()
+	_appcontext.myCamera = _appcontext._findCameraInScene()
 
-	console.log(_appcontext.camera)
+	console.log(_appcontext.myCamera)
 
-	_appcontext.renderer.render(_appcontext.scene, _appcontext.camera);
+	_appcontext.renderer.render(_appcontext.scene, _appcontext.myCamera);
 
 	function update() {
 	
-		_appcontext.renderer.render(_appcontext.scene, _appcontext.camera)
+		_appcontext.renderer.render(_appcontext.scene, _appcontext.myCamera)
 
 		requestAnimationFrame(update)
 
