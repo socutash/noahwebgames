@@ -78,7 +78,9 @@ GameSpace.prototype.go = function() {
 	_appcontext.renderer.render(_appcontext.scene, _appcontext.myCamera);
 
 	function update() {
-	
+
+		console.log("updating?")
+
 		_appcontext.renderer.render(_appcontext.scene, _appcontext.myCamera)
 
 		requestAnimationFrame(update)
