@@ -25,6 +25,8 @@ GameSpace.prototype._findCameraInScene = function() {
 
 	var length = _appcontext.scene.children.length 
 
+	console.log(length);
+
 	for (var i = 0; i < length; i++) {
 
 		console.log("Hi");
