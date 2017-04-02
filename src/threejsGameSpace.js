@@ -17,7 +17,7 @@ function GameSpace(renderwidth, renderheight) {
 
 }
 
-// Wonky that renderer needs to be told about both the scene and the camera
+// Wonky that renderer needs to be told about both the scene *and* the camera
 // Make sure there aren't cases where you attach more than one camera.
 GameSpace.prototype._findCameraInScene = function() {
 
@@ -27,7 +27,9 @@ GameSpace.prototype._findCameraInScene = function() {
 
 	for (var i = 0; i < length; i++) {
 
-		console.log(_appcontext.scene.children[i].type)
+		console.log("Hi");
+
+		console.log(_appcontext.scene.children[i].type);
 
 		if (_appcontext.scene.children[i].type.match("Camera")) {
 
