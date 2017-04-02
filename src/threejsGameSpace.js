@@ -8,6 +8,7 @@ function GameSpace(renderwidth, renderheight) {
 
 	this.renderer = new THREE.WebGLRenderer();
 	this.scene = new THREE.Scene();
+	this.camera = null
 
 	console.log("Hey: " + this.scene);
 
@@ -33,9 +34,7 @@ GameSpace.prototype._findCameraInScene = function() {
 
 	};
 
-	console.log(camera)
-
-	return camera 
+	_appcontext.camera = camera 
 }
 
 GameSpace.prototype.add = function(anObject) {
@@ -55,16 +54,16 @@ GameSpace.prototype.show = function() {
 
 GameSpace.prototype.go = function() {
 
-	_appcontext.renderer.render(_appcontext.scene, _appcontext._findCameraInScene());
+	_appcontext.renderer.render(_appcontext.scene, _appcontext.camera);
 
-	//function update() {
+	function update() {
 	
-	//	this.renderer.render(this.scene, this._findCameraInScene())
+		_appcontxt.renderer.render(_appcontext.scene, _appcontext.camera)
 
-	//	requestAnimationFrame(update)
+		requestAnimationFrame(update)
 
-	//}
+	}
 
-	requestAnimationFrame(_appcontext.go);
+	//requestAnimationFrame(_appcontext.go);
 
 }
