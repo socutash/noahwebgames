@@ -33,6 +33,8 @@ GameSpace.prototype._findCameraInScene = function() {
 
 	};
 
+	console.log(camera)
+
 	return camera 
 }
 
@@ -53,7 +55,7 @@ GameSpace.prototype.show = function() {
 
 GameSpace.prototype.go = function() {
 
-	_appcontext.renderer.render(_appcontext.scene, _appcontext._findCameraInScene())
+	_appcontext.renderer.render(_appcontext.scene, _appcontext._findCameraInScene());
 
 	//function update() {
 	
@@ -63,6 +65,6 @@ GameSpace.prototype.go = function() {
 
 	//}
 
-	requestAnimationFrame(_appcontext.go)
+	requestAnimationFrame(_appcontext.go);
 
 }
