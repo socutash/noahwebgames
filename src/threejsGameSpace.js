@@ -8,7 +8,9 @@ function GameSpace(renderwidth, renderheight) {
 
 	this.renderer = new THREE.WebGLRenderer();
 	this.scene = new THREE.Scene();
-	this.camera = null
+	this.camera = null;
+
+	this._findCameraInScene()
 
 	console.log("Hey: " + this.scene);
 
