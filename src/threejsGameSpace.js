@@ -1,7 +1,7 @@
 
 function GameSpace(renderwidth, renderheight) {
 
-	this.idth = renderwidth;
+	this.width = renderwidth;
 	this.height = renderheight;
 
 	this.container = document.body;
