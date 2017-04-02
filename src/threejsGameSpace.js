@@ -27,6 +27,8 @@ GameSpace.prototype._findCameraInScene = function() {
 
 	for (var i = 0; i < length; i++) {
 
+		console.log(_appcontext.scene.children[i].type)
+
 		if (_appcontext.scene.children[i].type.match("Camera")) {
 
 			camera = _appcontext.scene.children[i];
