@@ -10,11 +10,10 @@ function GameSpace(renderwidth, renderheight) {
 	this.scene = new THREE.Scene();
 	this.camera = null;
 
-	this._findCameraInScene()
+	_appcontext = this;
 
+	this._findCameraInScene();
 	console.log("Hey: " + this.scene);
-
-	_appcontext = this
 
 }
 
