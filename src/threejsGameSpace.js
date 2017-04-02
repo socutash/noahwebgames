@@ -63,6 +63,6 @@ GameSpace.prototype.go = function() {
 
 	//}
 
-	requestAnimationFrame(_appcontext.update)
+	requestAnimationFrame(_appcontext.go)
 
 }
