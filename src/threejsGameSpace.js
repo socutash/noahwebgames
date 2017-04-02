@@ -11,6 +11,8 @@ function GameSpace(renderwidth, renderheight) {
 
 	console.log("Hey: " + this.scene);
 
+	_appcontext = this
+
 }
 
 // Wonky that renderer needs to be told about both the sceene *and( the camera
@@ -19,13 +21,13 @@ GameSpace.prototype._findCameraInScene = function() {
 
 	var camera = null;
 
-	var length = this.scene.children.length 
+	var length = _appcontext.scene.children.length 
 
 	for (var i = 0; i < length; i++) {
 
-		if (this.scene.children[i].type.match("Camera")) {
+		if (_appcontext.scene.children[i].type.match("Camera")) {
 
-			camera = this.scene.children[i];
+			camera = _appcontext.scene.children[i];
 
 		};
 
@@ -36,22 +38,22 @@ GameSpace.prototype._findCameraInScene = function() {
 
 GameSpace.prototype.add = function(anObject) {
 
-	console.log(this.scene)
+	console.log(_appcontext.scene)
 
-	this.scene.add(anObject);
+	_appcontext.scene.add(anObject);
 
 }
 
 GameSpace.prototype.show = function() {
 
-	this.renderer.setSize(this.width, this.height)
-	this.container.appendChild(this.renderer.domElement)
+	_appcontext.renderer.setSize(_appcontext.width, _appcontext.height)
+	_appcontext.container.appendChild(_appcontext.renderer.domElement)
 
 }
 
 GameSpace.prototype.go = function() {
 
-	this.renderer.render(this.scene, this._findCameraInScene())
+	_appcontext.renderer.render(_appcontext.scene, _appcontext._findCameraInScene())
 
 	//function update() {
 	
@@ -61,6 +63,6 @@ GameSpace.prototype.go = function() {
 
 	//}
 
-	//requestAnimationFrame(this.update)
+	requestAnimationFrame(_appcontext.update)
 
 }
