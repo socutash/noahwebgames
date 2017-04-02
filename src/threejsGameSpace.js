@@ -77,7 +77,7 @@ GameSpace.prototype.go = function() {
 
 	console.log(_appcontext.renderer)
 
-	_appcontext.renderer.render(_appcontext.scene, _appcontext.myCamera);
+	//_appcontext.renderer.render(_appcontext.scene, _appcontext.myCamera);
 
 	function update() {
 
@@ -88,6 +88,8 @@ GameSpace.prototype.go = function() {
 		requestAnimationFrame(update)
 
 	}
+
+	update()
 
 	//requestAnimationFrame(_appcontext.go);
 
