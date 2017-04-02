@@ -12,7 +12,6 @@ function GameSpace(renderwidth, renderheight) {
 
 	_appcontext = this;
 
-	this._findCameraInScene();
 	console.log("Hey: " + this.scene);
 
 }
@@ -25,11 +24,7 @@ GameSpace.prototype._findCameraInScene = function() {
 
 	var length = _appcontext.scene.children.length 
 
-	console.log(length);
-
 	for (var i = 0; i < length; i++) {
-
-		console.log("Hi");
 
 		console.log(_appcontext.scene.children[i].type);
 
@@ -62,6 +57,8 @@ GameSpace.prototype.show = function() {
 }
 
 GameSpace.prototype.go = function() {
+
+	_appcontext.camera = _appcontext._findCameraInScene()
 
 	_appcontext.renderer.render(_appcontext.scene, _appcontext.camera);
 
