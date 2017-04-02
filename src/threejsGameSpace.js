@@ -60,7 +60,7 @@ GameSpace.prototype.show = function() {
 
 GameSpace.prototype.go = function() {
 
-	_appcontext.myCamera = _appcontext._findCameraInScene()
+	_appcontext._findCameraInScene()
 
 	console.log(_appcontext.myCamera)
 
