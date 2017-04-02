@@ -60,6 +60,8 @@ GameSpace.prototype.go = function() {
 
 	_appcontext.camera = _appcontext._findCameraInScene()
 
+	console.log(_appcontext.camera)
+
 	_appcontext.renderer.render(_appcontext.scene, _appcontext.camera);
 
 	function update() {
