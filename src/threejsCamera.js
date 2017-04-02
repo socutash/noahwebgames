@@ -14,10 +14,20 @@ function Camera(renderwidth, renderheight) {
         	this.far
     		);
 
+	_cameracontext = this;
+
 }
 
 Camera.prototype.aspect = function(aspect) {
 
-	this.camera.aspect = aspect;
+	_cameracontext.camera.aspect = aspect;
+
+}
+
+Camera.prototype.position = function(x, y, z) {
+
+	_cameracontext.camera.x = x,
+	_cameracontext.camera.y = y,
+	_cameracontext.camera.z = z
 
 }
