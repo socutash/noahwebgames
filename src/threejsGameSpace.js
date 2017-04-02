@@ -8,11 +8,21 @@ function GameSpace(renderwidth, renderheight) {
 
 	this.renderer = new THREE.WebGLRenderer();
 	this.scene = new THREE.Scene();
+	this.light = null;
 	this.myCamera = null;
 
 	_appcontext = this;
 
+	this._setDefaultLight()
+
 	console.log("Hey: " + this.scene);
+
+}
+
+GameSpace.prototype._setDefaultLight = function() {
+
+	_appcontext.light = new THREE.PointLight(0xffffff)
+	_appcontext.add(_appcontext.light)
 
 }
 
@@ -60,6 +70,7 @@ GameSpace.prototype.show = function() {
 
 GameSpace.prototype.go = function() {
 
+	// Get the camera and set a light
 	_appcontext._findCameraInScene()
 
 	console.log(_appcontext.myCamera)
