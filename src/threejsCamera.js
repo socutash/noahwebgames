@@ -26,8 +26,8 @@ Camera.prototype.aspect = function(aspect) {
 
 Camera.prototype.position = function(x, y, z) {
 
-	_cameracontext.camera.x = x,
-	_cameracontext.camera.y = y,
-	_cameracontext.camera.z = z
+	_cameracontext.camera.x = x;
+	_cameracontext.camera.y = y;
+	_cameracontext.camera.z = z;
 
 }
