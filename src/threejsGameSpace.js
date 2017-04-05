@@ -55,7 +55,9 @@ GameSpace.prototype._findCameraInScene = function() {
 
 GameSpace.prototype.add = function(anObject) {
 
-	console.log("Adding an object to the scene: " + _appcontext.scene)
+	console.log("Adding an object to the scene: ")
+	console.log(_appcontext.scene);
+	console.log(anObject);
 
 	_appcontext.scene.add(anObject);
 
