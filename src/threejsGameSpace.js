@@ -55,7 +55,7 @@ GameSpace.prototype._findCameraInScene = function() {
 
 GameSpace.prototype.add = function(anObject) {
 
-	console.log(_appcontext.scene)
+	console.log("Adding an object to the scene: " + _appcontext.scene)
 
 	_appcontext.scene.add(anObject);
 
@@ -73,9 +73,9 @@ GameSpace.prototype.go = function() {
 	// Get the camera and set a light
 	_appcontext._findCameraInScene()
 
-	console.log(_appcontext.myCamera)
+	console.log("Here is the camera I found: " + _appcontext.myCamera)
 
-	console.log(_appcontext.renderer)
+	console.log("Here is my renderer, right before I start rendering: " + _appcontext.renderer)
 
 	//_appcontext.renderer.render(_appcontext.scene, _appcontext.myCamera);
 
