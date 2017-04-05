@@ -9,7 +9,7 @@ function Cube(length) {
 		this.length
 	);
 
-	this.cubeMaterial = new THREE.MeshBasictMaterial(
+	this.cubeMaterial = new THREE.MeshBasicMaterial(
 
 		{
 			color: 0xCC0000;
