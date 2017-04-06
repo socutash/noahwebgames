@@ -87,9 +87,9 @@ GameSpace.prototype.go = function() {
 
 		console.log("updating?")
 
-		requestAnimationFrame(update)
 		_appcontext.renderer.render(_appcontext.scene, _appcontext.myCamera)
 		_appcontext.myCamera.lookAt(new THREE.Vector3(0,0,0));
+		//requestAnimationFrame(update)
 
 	}
 
