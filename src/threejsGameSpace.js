@@ -94,6 +94,8 @@ GameSpace.prototype.go = function() {
 
 	}
 
+	update()
+
 	//requestAnimationFrame(_appcontext.go);
 
 }
