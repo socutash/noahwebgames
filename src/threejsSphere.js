@@ -14,7 +14,8 @@ function Sphere(radius, segments, rings) {
 	this.sphereMaterial = new THREE.MeshLambertMaterial(
 
 		{
-			color: 0xCC0000
+			color: 0xCC0000,
+			wireframe: true
 		}
 	);
 
@@ -25,12 +26,14 @@ function Sphere(radius, segments, rings) {
 
 	);
 
+	_context = this
+
 };
 
 Sphere.prototype.position =  function(x, y, z) {
 
-	this.sphere.position.x = x;
-	this.sphere.position.y = y;
-	this.sphere.position.z = z;
+	_context.sphere.position.x = x;
+	_context.sphere.position.y = y;
+	_context.sphere.position.z = z;
 
 };
