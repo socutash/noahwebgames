@@ -15,7 +15,7 @@ function GameSpace(renderwidth, renderheight) {
 
 	this._setDefaultLight()
 
-	console.log("Hey: " + this.scene);
+	// console.log("Hey: " + this.scene);
 
 }
 
@@ -36,11 +36,11 @@ GameSpace.prototype._findCameraInScene = function() {
 
 	for (var i = 0; i < length; i++) {
 
-		console.log(_appcontext.scene.children[i].type);
+		// console.log(_appcontext.scene.children[i].type);
 
 		if (_appcontext.scene.children[i].type.match("Camera")) {
 
-			console.log("Found a camera.")
+			// console.log("Found a camera.")
 
 			camera = _appcontext.scene.children[i];
 
@@ -48,16 +48,16 @@ GameSpace.prototype._findCameraInScene = function() {
 
 	};
 
-	console.log(camera)
+	// console.log(camera)
 
 	_appcontext.myCamera = camera 
 }
 
 GameSpace.prototype.add = function(anObject) {
 
-	console.log("Adding an object to the scene: ")
-	console.log(_appcontext.scene);
-	console.log(anObject);
+	// console.log("Adding an object to the scene: ")
+	// console.log(_appcontext.scene);
+	// console.log(anObject);
 
 	_appcontext.scene.add(anObject);
 
@@ -75,11 +75,11 @@ GameSpace.prototype.go = function() {
 	// Get the camera and set a light
 	_appcontext._findCameraInScene()
 
-	console.log("Here is the camera I found: ");
-	console.log(_appcontext.myCamera);
+	// console.log("Here is the camera I found: ");
+	// console.log(_appcontext.myCamera);
 
-	console.log("Here is my renderer, right before I start rendering: ");
-	console.log(_appcontext.renderer);
+	// console.log("Here is my renderer, right before I start rendering: ");
+	// console.log(_appcontext.renderer);
 
 	//_appcontext.renderer.render(_appcontext.scene, _appcontext.myCamera);
 
@@ -87,7 +87,7 @@ GameSpace.prototype.go = function() {
 
 		requestAnimationFrame(update)
 
-		console.log("updating?")
+		// console.log("updating?")
 
 		_appcontext.renderer.render(_appcontext.scene, _appcontext.myCamera)
 		_appcontext.myCamera.lookAt(new THREE.Vector3(0,0,0));
